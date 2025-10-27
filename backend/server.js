@@ -36,10 +36,6 @@ app.get('/', (req, res) => {
   res.send('Backend is working!');
 });
 
-// (zyada endpoints yahan add karo)
-
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
-});
-
-app.listen(5000, () => console.log('Server started on port 5000'));
+// --------- Yeh sirf ak baar rakho, hardcoded 5000 hatao ----------
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
