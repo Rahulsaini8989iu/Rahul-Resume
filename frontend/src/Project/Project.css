@@ -1,0 +1,180 @@
+.projects-page {
+  width: 100%;
+  min-height: 90vh;
+  padding: 80px 40px;
+  background: #d9d9d9;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Grid setup */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 10px;
+}
+
+/* Card styling */
+.project-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+/* Image */
+.project-image-wrapper {
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(82, 80, 80, 0.85);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: opacity 0.4s ease;
+  border-radius: 15px;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+.project-overlay p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.view-btn {
+  padding: 10px 20px;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .projects-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+  .projects-grid {
+    gap: 25px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 60px 20px;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-overlay h2 {
+    font-size: 1.1rem;
+  }
+
+  .project-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .view-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-overlay h2 {
+    font-size: 1rem;
+  }
+
+  .project-overlay p {
+    font-size: 0.8rem;
+  }
+
+  .view-btn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+}

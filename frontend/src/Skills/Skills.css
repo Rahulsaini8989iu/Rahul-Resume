@@ -1,0 +1,141 @@
+.skills-section {
+  width: 85%;
+  margin: 120px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.skills-category {
+  text-align: center;
+}
+.skills-top {
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.skills-btn {
+  border: 5px solid #000;
+  background: transparent;
+  padding: 18px 60px;
+  border-radius: 0px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills-desc {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #222;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-line {
+  margin: 25px auto 0;
+  width: 60px;
+  height: 2px;
+  background-color: #000;
+}
+
+.skills-category h1 {
+  font-size: 2.2rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+  position: relative;
+  color: #111;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.skills-category h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  width: 70px;
+  height: 3px;
+  background: #00ffff;
+  border-radius: 10px;
+}
+
+/* 🔥 4-column layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #d1d1d1, -5px -5px 15px #ffffff;
+  padding: 25px 15px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px #00ffff60);
+  transition: all 0.4s ease;
+}
+
+.skill-card span {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .skill-card {
+    width: 110px;
+    height: 110px;
+  }
+  .skills-category h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+}

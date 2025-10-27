@@ -1,0 +1,136 @@
+/* 🌿 Contact Form - Modern Premium Look */
+
+/* Wrapper */
+.form-wrapper {
+  background: radial-gradient(circle, #f0f0f0, #d9d9d9);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Container */
+.form-container {
+  width: 100%;
+  max-width: 520px;
+  background: radial-gradient(circle, #f0f0f0, #d9d9d9);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(15, 10, 10, 0.08);
+  padding: 40px 30px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(101, 101, 101, 0.15);
+}
+
+/* 📝 Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ✏️ Input Fields */
+input,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  padding: 12px 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00ffff;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.15);
+  transform: scale(1.01);
+}
+
+::placeholder {
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* 🧾 Textarea */
+textarea {
+  height: 120px;
+  resize: none;
+  border-left: 2px solid #000;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* ✨ Submit Button Section */
+.submit-wrapper {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.submit-wrapper .line {
+  height: 30px;
+  width: 2px;
+  background: linear-gradient(180deg, #000, #00ffff);
+  border-radius: 2px;
+}
+
+.submit-wrapper button {
+  background: linear-gradient(90deg, #00ffff, #0099ff);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-weight: bold;
+  border-radius: 25px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 255, 255, 0.3);
+}
+
+.submit-wrapper button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 255, 255, 0.4);
+}
+
+/* 📱 Responsive */
+@media (max-width: 500px) {
+  .form-container {
+    padding: 25px 20px;
+  }
+
+  textarea {
+    height: 90px;
+  }
+
+  .submit-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .submit-wrapper button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .submit-wrapper .line {
+    display: none;
+  }
+}

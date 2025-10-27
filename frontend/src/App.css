@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}

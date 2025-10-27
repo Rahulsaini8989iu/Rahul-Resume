@@ -1,0 +1,46 @@
+.footer {
+  width: 100%;
+  background-color: #111; /* Dark background */
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.back-to-top {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  filter: invert(0); /* Makes SVG icons white if black by default */
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer strong {
+  color: white;
+}

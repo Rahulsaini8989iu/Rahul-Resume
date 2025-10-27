@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Geograph";
+  src: url("../public/fonts/TestGeograph-Medium-BF6621def263e37.otf") format("opentype");
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 10px;
+  z-index: 999;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  margin: 0 20px;
+  width: calc(100% - 40px);
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  padding: 0px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo h1 {
+  font-family: "geograph", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.logo img {
+  height: 50px;
+  margin-left: -14px;
+  margin-top: 2px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0px 40px;
+  gap: 40px;
+  font-size: 14px;
+  font-family: verdana, sans-serif;
+}
+
+.links li {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 6px 0;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Top line: Left to Right */
+.links li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: aqua;
+  transition: width 0.4s ease;
+  box-shadow: 0px 0px 5px 1px aqua;
+}
+
+/* Bottom line: Right to Left */
+.links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 1px;
+  background-color: aqua;
+  box-shadow: 0px 0px 5px 1px aqua;
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.links li:hover::before {
+  width: 100%;
+}
+
+.links li:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+.links button {
+  height: 35px;
+  box-shadow: 0px 0px 6px 2px white;
+  width: 130px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "geograph", sans-serif;
+  color: black;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.links button:hover {
+  background-color: aqua;
+  box-shadow: 0px 0px 12px 4px aqua;
+  border: none;
+  transform: translateY(-2px);
+}
+
+.bar {
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .links {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+  }
+
+  .logo {
+    padding: 0px 20px;
+  }
+  .logo h1 {
+    color: white;
+    font-size: 18px;
+  }
+
+  .bar {
+    padding: 0px 40px;
+    font-size: 22px;
+    display: block;
+  }
+}
