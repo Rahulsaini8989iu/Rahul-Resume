@@ -12,14 +12,14 @@ app.post('/send', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "rahulsaini8568677@gmail.com",      // अपनी gmail id
-      pass: "mvuf argq bvsl easp",         // Gmail App password (16 character वाला)
+      user: "rahulsaini8568677@gmail.com",     
+      pass: "mvuf argq bvsl easp",        
     },
   });
 
   const mailOptions = {
     from: email,
-    to: "rahulsaini8568677@gmail.com",         // अपनी gmail id
+    to: "rahulsaini8568677@gmail.com",        
     subject: "Contact Form Entry",
     text: `नाम: ${name}\nईमेल: ${email}\nफोन: ${phone}\nसंदेश: ${message}`,
   };
@@ -28,9 +28,18 @@ app.post('/send', async (req, res) => {
     await transporter.sendMail(mailOptions);
     res.status(200).json({ success: true, message: 'Email sent' });
   } catch (error) {
-    console.error('Mail error:', error); // backend terminal में error पूरा दिखेगा
+    console.error('Mail error:', error); 
     res.status(500).json({ success: false, message: 'Error', error: error.toString() });
   }
+});
+app.get('/', (req, res) => {
+  res.send('Backend is working!');
+});
+
+// (zyada endpoints yahan add karo)
+
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
 
 app.listen(5000, () => console.log('Server started on port 5000'));
